@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: rgba(33,33,33,0.963);;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+.display {
+  width: 351px;
+  background: rgba(131,131,131,0.963);
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.firstline {
+  height: 60px;
+  text-align: left;
+  font-size: 18px;
+  color: #000;
+  overflow: scroll;
+}
+
+.secondline {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+}
+
+.advanced button {
+  width: 50px;
+  height: 40px;
+  margin: 4px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  color: white;
+  background: rgba(33,33,33,0.963);;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+.controlls button {
+  max-width: 50px;
+  height: 40px;
+  margin: 4px;
+  border: 1px solid #222;
+  border-radius: 50%;
+  color: white;
+  background: rgba(33,33,33,0.963);;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+.normal button {
+  width: 62.1px;
+  height: 40px;
+  margin: 4px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  background: rgba(33,33,33,0.963);;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: white;
+}
+
+button:hover {
+  background: grey;
+  color: black;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+.normal button.red{
+  color: rgb(200,60,100);
+}

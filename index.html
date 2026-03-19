@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Casio fx-100ms</title>
+</head>
+<body>
+  
+  <div class="container">
+    <!-- <table>
+    <tr>
+      <td>CASIO</td>
+      <td></td>
+      <td>fx-100ms</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>S-V.P.A.M.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>2nd edition</td>
+    </tr>
+      </table> -->
+    <div class="display">
+     <div class="firstline"><h1></h1></div>
+     <div class="secondline"><h2></h2></div> 
+    </div>
+    <div class="controlls">
+      <table>
+        <tr>
+          <td><button onclick="shift()">Shift</button></td>
+          <td><button onclick="alpha()">Alpha</button></td>
+          <td></td>
+          <td><button>up</button></td>
+          <td></td>
+          <td><button>mode</button></td>
+          <td><button>on</button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><button>left</button></td>
+          <td></td>
+          <td><button>right</button></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button>down</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="advanced">
+      <table>
+        <tr>
+          <td><button onclick="key(this, '')">CALC</button></td>
+          <td><button onclick="key(this, '')">&int; dx</button></td>
+          <td></td>
+          <td></td>
+          <td><button onclick="key(this, '**-1')">x<sup>-1</sup></button></td>
+          <td><button onclick="key(this, '**3')">x³</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="key(this, '')">a b/c</button></td>
+          <td><button onclick="key(this, '')">&radic;</button></td>
+          <td><button onclick="key(this, '**2')">x²</button></td>
+          <td><button onclick="key(this, '**')">^</button></td>
+          <td><button onclick="key(this, 'Math.log10(')">log</button></td>
+          <td><button onclick="key(this, 'Math.log(')">ln</button></td>
+        </tr><tr>
+          <td><button onclick="key(this, '')">(-)</button></td>
+          <td><button onclick="key(this, '')">° ' "</button></td>
+          <td><button onclick="key(this, '')">hyp</button></td>
+          <td><button onclick="key(this, 'Math.sin(')">sin</button></td>
+          <td><button onclick="key(this, 'Math.cos(')">cos</button></td>
+          <td><button onclick="key(this, 'Math.tan(')">tan</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="key(this, '')">RCL</button></td>
+          <td><button onclick="key(this, '')">ENG</button></td>
+          <td><button onclick="key(this, '(')">(</button></td>
+          <td><button onclick="key(this, ')')">)</button></td>
+          <td><button onclick="key(this, ',')">,</button></td>
+          <td><button onclick="key(this, '')">M+</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="normal">
+      <table>
+        <tr>
+          <td><button onclick="key(this, 7)">7</button></td>
+          <td><button onclick="key(this, 8)">8</button></td>
+          <td><button onclick="key(this, 9)">9</button></td>
+          <td><button onclick="key(this, 'DEL')" class="red">DEL</button></td>
+          <td><button onclick="key(this, 'AC')" class="red">AC</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="key(this, 4)">4</button></td>
+          <td><button onclick="key(this, 5)">5</button></td>
+          <td><button onclick="key(this, 6)">6</button></td>
+          <td><button onclick="key(this, '*')">&times;</button></td>
+          <td><button onclick="key(this, '/')">&divide;</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="key(this, 1)">1</button></td>
+          <td><button onclick="key(this, 2)">2</button></td>
+          <td><button onclick="key(this, 3)">3</button></td>
+          <td><button onclick="key(this, '+')">+</button></td>
+          <td><button onclick="key(this, '-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="key(this, 0)">0</button></td>
+          <td><button onclick="key(this, '.')">.</button></td>
+          <td><button onclick="key(this, '*10**')">&times;10<sup>x</sup></button></td>
+          <td><button onclick="key(this, ans)">Ans</button></td>
+          <td><button onclick="key(this, '=')">=</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
