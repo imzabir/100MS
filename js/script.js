@@ -5,19 +5,23 @@ let equation = ""
 let isShift = false
 let isAlpha = false
 let firstChar = true
+let isActive = false
 let errorName = ''
 let modes= {
   "calculator" : ["COMP","CMPLX","SD", "REG", "BASE", "EQN"],
   "angle": ["Deg", "Rad", "Gra"], 
   "display": ["Fix", "Sci", "Norm"]
 }
-let Mode = [modes.calculator[0], modes.angle[0], modes.display[2]]
+let mode = [modes.calculator[0], modes.angle[0], modes.display[2]]
 let ans = ""
 let preAns = ""
 let result = ""
+let modeCounter = 0;
 //functions...
 function key(a,b){
-  firstChar = false
+  if(isActive){
+    if(mode[0] === "COMP"){
+    firstChar = false
   if(!isShift && !isAlpha){
     switch (a.textContent) {
       case "AC":
@@ -145,6 +149,8 @@ function key(a,b){
       //underconstructionnnnnn 
     }
   }
+  }
+  }
 }
 function calculate(){
   
@@ -154,11 +160,11 @@ function calculate(){
   else{
     try{
     result = eval(equation)
-    if(err(result)){ result = errorName }
+    if(error(result)){ result = errorName }
     }
-     catch(err){
+    catch(err){
     result = "Error"
-    console.log(err)
+    error(err)
   }
   }
   sl.querySelector('h2').textContent = result
@@ -171,69 +177,29 @@ function shift(){
 function alpha(){
     isAlpha = !isAlpha
 }
-function mode(a){
-  //calculator mode
-  switch (a[0]) {
-    case "COMP":
-      
-      break;
-    case "CMPLX":
-      
-      break;
-    case "SD":
-      
-      break;
-    case "REG":
-      
-      break;
-    case "BASE":
-      
-      break;
-    case "EQN":
-      
-      break;
-    default:
-      
-  }
-  //angle mode
-  switch (a[1]) {
-    case "Deg":
-      
-      break;
-    case "Rad":
-      
-      break;
-    case "Gra":
-      
-      break;
-    default:
-      
-  }
-  //display mode
-  switch (a[2]) {
-    case "Fix":
-      
-      break;
-    case "Sci":
-      
-      break;
-    case "Norm" :
-      
-      break;
-    default:
-      
-  }
+function changeMode(a){
+  let total = modes.calculator.length
 }
 function history(){
   preAns = ans
   ans = result
 }
-function err(a){
+function error(a){
   if(a >= 10**100){
     errorName = "Math Error!"
     return true
   }
+  else if(a.message === "missing ) after argument list"){
+    equation += ")"
+    calculate()
+  }
   else{
+    console.log(a.message)
+    equation = a
+    console.log(equation)
     return false
   }
+}
+function active(){
+  isActive = true
 }
